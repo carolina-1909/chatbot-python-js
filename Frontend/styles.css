@@ -1,0 +1,242 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+
+   
+    
+    
+
+}
+#video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+
+
+/* Contenedor del chat */
+.caja-chat {
+    width: 100%;
+    max-width: 500px;
+    height: 700px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(12, 3, 135, 0.985);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative; 
+    z-index: 1;
+}
+
+/* Encabezado del chat */
+.chat-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #4a6bff;
+    color: white;
+    position: relative;
+}
+
+.bot-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    color: #152a8a;
+    font-size: 20px;
+}
+
+
+.chat-title h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.estado {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Área de mensajes */
+.mensajes-chat {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.message {
+    display: flex;
+    margin-bottom: 15px;
+    max-width: 80%;
+}
+
+.message-content {
+    padding: 10px 15px;
+    border-radius: 18px;
+    line-height: 1.4;
+    position: relative;
+}
+
+.message-content1 {
+    padding: 10px 15px;
+    border-radius: 18px;
+    line-height: 1.4;
+    position: relative;
+}
+
+.message-time {
+    font-size: 10px;
+    color: #999;
+    align-self: flex-end;
+    margin: 0 5px;
+    white-space: nowrap;
+}
+
+.bot-message {
+    align-self: flex-start;
+}
+
+.bot-message .message-content1 {
+    background-color: #e5e5ea;
+    color: #000;
+    border-bottom-left-radius: 5px;
+}
+
+.user-message {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.user-message .message-content {
+    background-color: #98a7ec;
+    color: white;
+    border-bottom-right-radius: 5px;
+}
+
+/* Área de entrada */
+.entrada-chat {
+    display: flex;
+    padding: 15px;
+    background-color: white;
+    border-top: 1px solid #eee;
+}
+
+.entrada-chat input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    outline: none;
+    font-size: 14px;
+}
+
+.entrada-chat button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #4a6bff;
+    color: white;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.entrada-chat button:hover {
+    background-color: #182872;
+}
+
+#mic-btn {
+    background-color: #f1f1f1;
+    color: #555;
+}
+
+/* Pie de página */
+.parte-abajo {
+    padding: 10px;
+    text-align: center;
+    font-size: 11px;
+    color: #999;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+}
+
+/* Efectos y animaciones */
+.message {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scrollbar personalizada */
+.mensajes-chat::-webkit-scrollbar {
+    width: 6px;
+}
+
+.mensajes-chat::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.mensajes-chat::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .caja-chat {
+        height: 100vh;
+        border-radius: 0;
+    }
+    
+    body {
+        padding: 0;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <title>Guía De Desarrollo Web, HTML, CSS, JS</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</head>
+<body>
+
+  <video autoplay muted loop id="video-fondo">
+    <source src="./assest/13794755_3840_2160_60fps.mp4" type="video/mp4" />
+  </video>
+
+  <div class="caja-chat">
+    <div class="chat-header">
+      <div class="bot-avatar">
+        <i class="fas fa-robot"></i>
+      </div>
+      <div class="chat-title">
+        <h2>Asistente Virtual 👩‍💻</h2>
+        <p class="estado">🟢 En línea</p>
+      </div>
+      <button class="close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="mensajes-chat" id="mensajes-chat">
+      <div class="message bot-message">
+        <div class="message-content">
+          <p>👋 ¡Hola! Soy tu ayudante virtual. Pregúntame lo que quieras sobre HTML, CSS o JavaScript.</p>
+        </div>
+        <div class="message-time">🕒10:00 AM</div>
+      </div>
+    </div>
+
+    <div class="entrada-chat">
+      <input type="text" placeholder="✍️ Escribe tu mensaje aquí..." id="user-input" />
+      <button id="send-btn">➤<i class="fas fa-paper-plane"></i></button>
+      <button id="mic-btn">🎙️<i class="fas fa-microphone"></i></button>
+    </div>
+
+    <div class="parte-abajo">
+      <p>💻 Powered by ChatBot Technology 🤖</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
